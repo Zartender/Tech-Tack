@@ -23,4 +23,4 @@ Post.hasMany(Comment,{
     onDelete: 'CASCADE'
 })
 
-module.exports = { User, Project };
+module.exports = { User, Post, Comment };
