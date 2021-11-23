@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS techtack_db;
+CREATE DATABASE techtack_db;
