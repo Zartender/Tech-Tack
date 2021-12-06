@@ -1,9 +1,22 @@
 /* NAVIGATION MENU */
+:root {
+   --color-lighter: rgb(238, 125, 125); 
+   --color-lightish: rgb(197, 79, 79);
+   --color-lightdarker: rgb(134, 31, 31);
+   --color-unsaturatedish: rgb(164, 117, 117);
+
+
+
+
+}
+
+
 nav {
    
     display: inline-block;
     height: 112px;
     line-height: 112px;
+    background-color: var(--color-lightish);
 }
 ul.navlist li {
     height: 112px;
@@ -17,7 +30,7 @@ ul.navlist {
 a.navigation:link, a.navigation:visited {
     font-family:'Roboto', sans-serif;
     font-size: 1.2rem;
-    color: #e2e2e2;
+    color: var(--color-unsaturatedish);
     padding: 15px;
     text-transform: uppercase;
     text-decoration: none;
@@ -27,8 +40,9 @@ a.navigation:link, a.navigation:visited {
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+    
 }
 a.navigation:hover, a.navigation:active {
-    color: #0b0f0c;
-    background-color: #8ec63f;
+    color: var(--color-lightdarker);
+    background-color: var(--color-lighter);
 }
