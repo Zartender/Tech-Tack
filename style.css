@@ -1,0 +1,34 @@
+/* NAVIGATION MENU */
+nav {
+   
+    display: inline-block;
+    height: 112px;
+    line-height: 112px;
+}
+ul.navlist li {
+    height: 112px;
+    list-style-type: none;
+    display: inline-block;
+}
+ul.navlist {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+a.navigation:link, a.navigation:visited {
+    font-family:'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 112px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a.navigation:hover, a.navigation:active {
+    color: #0b0f0c;
+    background-color: #8ec63f;
+}
