@@ -145,7 +145,7 @@ router.get('/:id', (req, res) => {
     });
   });
 
-// logout
+
   router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
       req.session.destroy(() => {
@@ -157,4 +157,4 @@ router.get('/:id', (req, res) => {
     }
   });
 
-module.exports = router;
+// module.exports = router;
