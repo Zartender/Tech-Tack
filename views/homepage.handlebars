@@ -16,7 +16,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#">Tech-Tac</a>
+              <a class="navbar-brand" href="#">Tech-Tack</a>
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
@@ -43,6 +43,15 @@
               <p class="lead">By developers, for developers.</p>
             </div>
           </div>
+
+          {{#each posts as |post|}}
+
+{{> post-info post }}
+</div>
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
+{{/each}}
 
 </body>
 </html>
