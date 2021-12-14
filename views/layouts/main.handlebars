@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Tech-Tack</title>
 </head>
-</head>
 
   <div class="wrapper">
     <header>
-       
+        <h1 class="has-text-black  has-text-weight-bold">Tech-Tack</h1>
         <nav class="navbar mt-2">
             {{#if loggedIn}}
             <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
             <a href="/dashboard" class="navbar-item is-hoverable pt-1">dashboard</a>
-            <a href="/dashboard/" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
             <button id="logout" class="button is-danger">logout</button>
             {{else}}
             <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
@@ -30,7 +29,22 @@
             {{{ body }}}
     </main>
 
-    
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            <p>
+            <a href="/">homepage</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">dashboard</a> | 
+            <a href="/dashboard/create/">create new post</a>
+            {{else}}
+             | <a href="/login/">login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+
+  </div>
+    </footer>
+  </div>
 
 {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
