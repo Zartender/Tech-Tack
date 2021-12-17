@@ -5,19 +5,19 @@ const { Comment } = require('../models');
 const commentData = [
     {
         user_id: 1,
-        post_id: 2,
-        comment_text: "TGreat Work."
+        post_id: 1,
+        comment_copy: "Great Work."
     },
-    {
-        user_id: 4,
-        post_id: 3,
-        comment_text: "Better than I thought."
-    },
-    {
-        user_id: 1,
-        post_id: 4,
-        comment_text: "Can't wait to see what's to come."
-    }
+    // {
+    //     user_id: 4,
+    //     post_id: 3,
+    //     comment_copy: "Better than I thought."
+    // },
+    // {
+    //     user_id: 1,
+    //     post_id: 4,
+    //     comment_copy: "Can't wait to see what's to come."
+    // }
 ]
 
 const seedDataForComments = () => Comment.bulkCreate(commentData);

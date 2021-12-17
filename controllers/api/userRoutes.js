@@ -18,17 +18,19 @@ router.get('/', (req, res) => {
 });
 // post route for user/1
 router.post('/', (req, res) => {
+  console.log("Creating a new user ", req.body); 
     User.create({
-      username: req.body.username,
+      user_name: req.body.user_name,
       email: req.body.email,
       password: req.body.password,
       twitter: req.body.twitter,
       github: req.body.github
     })
     .then(userDataDB => {
+      console.log("DB responsed ", userDataDB);
       req.session.save(() => {
         req.session.user_id = userDataDB.id;
-        req.session.username = userDataDB.username;
+        req.session.username = userDataDB.user_name;
         req.session.twitter = userDataDB.twitter;
         req.session.github = userDataDB.github;
         req.session.loggedIn = true;
@@ -115,6 +117,7 @@ router.get('/:id', (req, res) => {
   });
 
   router.post('/login', (req, res) => {
+    console.log("Finding a record in the DB", req.body); 
     User.findOne({
       where: {
         email: req.body.email
